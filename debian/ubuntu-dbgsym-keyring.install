@@ -1,0 +1,3 @@
+keyrings/ubuntu-keyring-2016-dbgsym.gpg etc/apt/trusted.gpg.d/
+keyrings/ubuntu-dbgsym-keyring.gpg      usr/share/keyrings/
+keyrings/ubuntu-dbgsym-removed-keys.gpg usr/share/keyrings/

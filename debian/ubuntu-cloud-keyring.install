@@ -1,0 +1,3 @@
+keyrings/ubuntu-keyring-2012-cloud-archive.gpg etc/apt/trusted.gpg.d/
+keyrings/ubuntu-cloud-keyring.gpg              usr/share/keyrings/
+keyrings/ubuntu-cloud-removed-keys.gpg         usr/share/keyrings/

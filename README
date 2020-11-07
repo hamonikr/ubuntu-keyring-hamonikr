@@ -1,0 +1,18 @@
+README for the ubuntu-keyring package
+=====================================
+
+
+Introduction
+------------
+
+Custom Ubuntu keyring package
+
+- include HamoniKR Team Repo sign
+- include Linuxmint sign
+- include Ubuntun archive keyring(ubuntu-keyring-2020.02.11.2)
+
+The Ubuntu project signs its Release files that are stored on the
+ubuntu server and its mirrors. 
+
+
+

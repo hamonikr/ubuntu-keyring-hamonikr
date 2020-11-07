@@ -1,0 +1,59 @@
+Source: ubuntu-keyring
+Section: misc
+Priority: optional
+Maintainer: Dimitri John Ledkov <dimitri.ledkov@canonical.com>
+Standards-Version: 4.1.3
+Build-Depends: gnupg, debian-keyring, debhelper (>= 10)
+
+Package: ubuntu-keyring
+Priority: important
+Architecture: all
+Multi-Arch: foreign
+Breaks: ubuntu-cloudimage-keyring (<< 2018.02.05)
+Replaces: ubuntu-cloudimage-keyring (<< 2018.02.05)
+Description: GnuPG keys of the Ubuntu archive
+ The Ubuntu project digitally signs its Release files. This package
+ contains the archive keys used for that.
+
+Package: ubuntu-keyring-udeb
+Package-Type: udeb
+Priority: standard
+Architecture: all
+Section: debian-installer
+Recommends: gpgv-udeb
+Description: GnuPG keys of the Ubuntu archive
+ The Ubuntu project digitally signs its Release files. This package
+ contains the archive keys used for that, in a minimal form for use
+ in the installer.
+
+Package: ubuntu-cloud-keyring
+Priority: optional
+Architecture: all
+Description: GnuPG keys of the Ubuntu Cloud Archive
+ The Ubuntu project digitally signs its Release files. This package
+ contains the archive keys used for the ubuntu-cloud.archive.canonical.com
+ repository.
+
+Package: ubuntu-oem-keyring
+Priority: optional
+Architecture: all
+Description: GnuPG keys of the Ubuntu OEM Vendor Archive
+ The Ubuntu project digitally signs its Release files. This package
+ contains the archive keys used for the oem.archive.canonical.com
+ repository.
+
+Package: ubuntu-dbgsym-keyring
+Priority: optional
+Architecture: all
+Description: GnuPG keys of the Ubuntu Debug Symbols Archive
+ The Ubuntu project digitally signs its Release files. This package
+ contains the archive keys used for the ddebs.ubuntu.com repository.
+
+Package: ubuntu-cloudimage-keyring
+Priority: optional
+Architecture: all
+Multi-Arch: foreign
+Depends: ubuntu-keyring (>= 2018.02.06)
+Description: dummy transitional package for GnuPG keys of cloudimage keyring
+ This package can be safely removed, as cloudimage keyring is now
+ shipped in the ubuntu-keyring package

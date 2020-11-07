@@ -1,0 +1,228 @@
+ubuntu-keyring (2020.02.11.2+hamonikr1) focal; urgency=medium
+
+  * Add linuxmint keyring
+  * Add hamonikr keyring  
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 06 Nov 2020 14:48:20 +0900
+
+ubuntu-keyring (2020.02.11.2) focal; urgency=medium
+
+  * Add new 2020 OEM key.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Thu, 09 Apr 2020 19:48:46 +0100
+
+ubuntu-keyring (2020.02.11.1) focal; urgency=medium
+
+  * Add new package ubuntu-oem-keyring with OEM Vendor archive key.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Tue, 11 Feb 2020 12:32:43 +0000
+
+ubuntu-keyring (2018.09.18.1) cosmic; urgency=medium
+
+  * Improve README.Source with upgrade/change instructions. 
+  * Validate that all shipped fragments are signed.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Tue, 18 Sep 2018 17:03:46 +0200
+
+ubuntu-keyring (2018.09.18) cosmic; urgency=medium
+
+  * keyrings/ubuntu-keyring-2018-archive.gpg,
+    keyrings/ubuntu-archive-keyring.gpg: add new archive signing key.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Tue, 18 Sep 2018 01:15:12 +0200
+
+ubuntu-keyring (2018.02.28) bionic; urgency=medium
+
+  * Drop Depends|Recommends on gpgv/gpg, as the package is purely static
+    keyring. The maintainer scripts are there only for the upgrade cases,
+    which fail gracefully in the absence of the optional tools.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Wed, 28 Feb 2018 16:31:17 +0000
+
+ubuntu-keyring (2018.02.06) bionic; urgency=medium
+
+  * Add the cloud simple streams signing key, in addition to the cloud
+    image signing key.
+  * Add a compat, dummy migration package for ubuntu-cloudimage-keyring.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Tue, 06 Feb 2018 17:15:58 +0000
+
+ubuntu-keyring (2018.02.05) bionic; urgency=medium
+
+  * Ship the current ubuntu-cloudimage-keyring in the ubuntu-keyring
+    package. LP: #1331057
+  * Ship ubuntu-cloud-keyring for Cloud Archive signing keys, as a
+    separate keyring in /etc/apt/trusted.gpg.d/, and remove it from the
+    trusted.gpg keyring as no longer needed to be there.
+  * Ship ubuntu-dgbsym key
+  * Specify udeb Package-Type and bump priority to standard.
+  * Bump standards version
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Wed, 17 Jan 2018 16:01:45 +0000
+
+ubuntu-keyring (2016.10.27) zesty; urgency=medium
+
+  * Drop 1024D key fragments. LP: #1363482
+  * Remove 1024D keys from ubuntu-archive-keyring.
+  * Add 1024D keys to ubuntu-archive-removed-keys.gpg.
+  * Remove the md5sums.asc file, no longer valid.
+  * Regenerate SHA512SUMS.txt.asc file.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Thu, 27 Oct 2016 15:31:35 +0100
+
+ubuntu-keyring (2016.09.19) yakkety; urgency=medium
+
+  * Ship each active key in a separate keyring in /etc/apt/trusted.gpg.d/
+    as conffiles for simpler usage of apt-secure(8).
+  * Remove all active keys from /etc/apt/trusted.gpg as they are shipped
+    now as fragment files.
+  * Depend on gpgv and only recommend gnupg.
+  * Stop calling apt-key update LP: #1619444
+  * Generate SHA512SUMS.txt.asc file, signed by me, and verified against
+    debian-keyring at build time as a weak consistency check.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Fri, 16 Sep 2016 14:36:10 +0100
+
+ubuntu-keyring (2016.09.01) yakkety; urgency=medium
+
+  * Depend on "gnupg | gnupg1". LP: #1615039
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Thu, 01 Sep 2016 18:44:10 +0100
+
+ubuntu-keyring (2016.05.13) yakkety; urgency=medium
+
+  * Depend on "gnupg | gnupg2" for apt-key now that apt itself doesn't.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Fri, 13 May 2016 14:59:35 -0600
+
+ubuntu-keyring (2012.05.19) quantal; urgency=low
+
+  * Add 4096R/C0B21F32 Ubuntu Archive Automatic Signing Key (2012)
+    <ftpmaster@ubuntu.com> to ubuntu-archive-keyring.
+  * Add 4096R/EFE21092 Ubuntu CD Image Automatic Signing Key (2012)
+    <cdimage@ubuntu.com> to ubuntu-archive-keyring.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sat, 19 May 2012 02:31:51 +0100
+
+ubuntu-keyring (2011.11.21) precise; urgency=low
+
+  * Mark ubuntu-keyring Multi-Arch: foreign.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 21 Nov 2011 12:26:35 +0000
+
+ubuntu-keyring (2010.+09.30) maverick; urgency=low
+
+  * debian/postinst:
+    - set default public keyring to 0644 if there is none yet
+      (LP: #651880)
+    - fixup maverick installs with 0600 public keyrings permissins
+      to avoid problems with the release upgrade later (LP: #651880)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Thu, 30 Sep 2010 15:36:26 +0200
+
+ubuntu-keyring (2010.+05.27.1) maverick; urgency=low
+
+  * debian/control: Drop Vcs-Bzr:, it's obsolete, and we have the
+    lp:ubuntu/ubuntu-keyring branch now.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Thu, 27 May 2010 18:51:39 +0200
+
+ubuntu-keyring (2010.+05.27) maverick; urgency=low
+
+  * Turn gnupg dependency into a gpgv recommends.
+  * Tweak the version number to be bigger than the previous upload (there was
+    a typo).
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Thu, 27 May 2010 18:36:03 +0200
+
+ubuntu-keyring (2010.11.09) lucid; urgency=low
+
+  * Compute md5sums.
+
+ -- Loïc Minier <loic.minier@ubuntu.com>  Mon, 11 Jan 2010 23:15:26 +0100
+
+ubuntu-keyring (2009.08.28) karmic; urgency=low
+
+  * Ship an empty ubuntu-archive-removed-keys.gpg keyring as gpg will create
+    it if missing when apt-key lists keys in this keyring; this will overwrite
+    the empty keyring with incorrect permissions on user systems which should
+    always be empty; LP: #218971.
+  * Bump standards-version to 3.8.3.
+  * Add build to .PHONY.
+
+ -- Loïc Minier <loic.minier@ubuntu.com>  Fri, 28 Aug 2009 11:33:52 +0200
+
+ubuntu-keyring (2008.03.04) hardy; urgency=low
+
+  * Ensure /var/lib/apt/keyrings exists before trying to copy to it (LP:
+    #198110)
+
+ -- Andrew Pollock <apollock@debian.org>  Mon, 03 Mar 2008 16:47:25 -0800
+
+ubuntu-keyring (2008.03.03) hardy; urgency=low
+
+  * put ubuntu-master-keyring.gpg into /var/lib/apt/keyrings to
+    avoid uneeded fetch on apt-key net-update (LP: #192074)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 03 Mar 2008 16:04:39 +0100
+
+ubuntu-keyring (2008.01.16) hardy; urgency=low
+
+  * put into bzr and add Vcs-Bzr header
+  * keyrings/ubuntu-archive-keyring.gpg:
+    - update from keyserver to include the master key signature
+  * keyrings/ubuntu-master-keyring.gpg:
+    - added new master signing key
+  * debian/rules:
+    - install keyrings/ubuntu-master-keyring.gpg 
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 16 Jan 2008 17:33:10 +0100
+
+ubuntu-keyring (2007.06.11) gutsy; urgency=low
+
+  * Bring over relevant changes from debian-archive-keyring (Anthony Towns,
+    Joey Hess):
+    - Bump priority to important to match overrides.
+    - Update FSF address in copyright.
+    - Add a postinst to the udeb that creates an archive.gpg symlink if one
+      doesn't yet exist. See Debian bug #423428.
+    - Clean up use of dpkg-gencontrol, removing obsolete workaround.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 11 Jun 2007 20:17:10 +0100
+
+ubuntu-keyring (2005.01.12.1) hoary; urgency=low
+
+  * udeb create was not binary all
+
+ -- Michael Vogt <mvo@debian.org>  Wed, 12 Jan 2005 16:06:23 +0100
+
+ubuntu-keyring (2005.01.12) hoary; urgency=low
+
+  * use absolute path for apt-key
+  * and make it really depend on gnupg
+
+ -- Michael Vogt <mvo@debian.org>  Wed, 12 Jan 2005 15:29:31 +0100
+
+ubuntu-keyring (2005.01.11) hoary; urgency=low
+
+  * applied patch to create a ubuntu-keyring udeb for the installer
+    (thanks to Colin)
+  * depend on gnupg
+  * call apt-key update (if apt-key is available)
+
+ -- Michael Vogt <mvo@debian.org>  Fri,  7 Jan 2005 14:28:29 +0100
+
+ubuntu-keyring (2005.01.04) hoary; urgency=low
+
+  * Add 1024D/FBB75451 Ubuntu CD Image Automatic Signing Key
+    <cdimage@ubuntu.com> to ubuntu-archive-keyring.
+
+ -- Colin Watson <cjwatson@canonical.com>  Wed,  5 Jan 2005 00:04:09 +0000
+
+ubuntu-keyring (2004.12.16) hoary; urgency=low
+
+  * Initial release with the Ubuntu Archive Signing Key in
+    the ubuntu-archive-keyring
+
+ -- Michael Vogt <mvo@debian.org>  Fri,  3 Dec 2004 22:10:41 +0100
+

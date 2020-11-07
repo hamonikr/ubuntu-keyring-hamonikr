@@ -1,0 +1,4 @@
+keyrings/ubuntu-keyring-2008-oem.gpg etc/apt/trusted.gpg.d/
+keyrings/ubuntu-keyring-2020-oem.gpg etc/apt/trusted.gpg.d/
+keyrings/ubuntu-oem-keyring.gpg              usr/share/keyrings/
+keyrings/ubuntu-oem-removed-keys.gpg         usr/share/keyrings/

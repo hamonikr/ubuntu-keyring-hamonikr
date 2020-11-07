@@ -1,0 +1,25 @@
+The fingerprints currently in use by The Ubuntu Project are listed at:
+
+    https://wiki.ubuntu.com/SecurityTeam/FAQ#GPG_Keys_used_by_Ubuntu
+
+The sha512sums of the keyrings and fragments can be verified using:
+
+    $ gpg --no-default-keyring --keyring /usr/share/keyrings/debian-keyring.gpg --decrypt SHA512SUMS.txt.asc | sha512sum -c -
+
+It is left as an excercise to the reader to establish trust path to
+the Debian Project strongly connect set of keys.
+
+When updating the package, one should:
+   1. Add/Rm the keys from keyrings
+   2. Update `regenerate-key-fragments` target as needed
+   3. Rerun `./debian/rules regenerate-key-fragments`
+   4. Test build
+   5. Consider updating:
+      - https://wiki.ubuntu.com/SecurityTeam/FAQ#GPG_Keys_used_by_Ubuntu
+      - https://code.launchpad.net/~ubuntu-archive/ubuntu-archive-publishing/trunk
+      - https://code.launchpad.net/~ubuntu-cdimage/ubuntu-cdimage/mainline
+      - https://code.launchpad.net/~ubuntu-cdimage/debian-cd/ubuntu
+      - jerff / streams signing
+   6. Be merry
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>, Mon, 19 Sep 2016 19:14:35 +0100

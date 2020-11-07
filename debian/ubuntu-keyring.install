@@ -1,0 +1,8 @@
+keyrings/ubuntu-keyring-2012-archive.gpg    etc/apt/trusted.gpg.d/
+keyrings/ubuntu-keyring-2018-archive.gpg    etc/apt/trusted.gpg.d/
+keyrings/ubuntu-keyring-2012-cdimage.gpg    etc/apt/trusted.gpg.d/
+keyrings/ubuntu-archive-keyring.gpg         usr/share/keyrings/
+keyrings/ubuntu-archive-removed-keys.gpg    usr/share/keyrings/
+keyrings/ubuntu-master-keyring.gpg          usr/share/keyrings/
+keyrings/ubuntu-cloudimage-keyring.gpg      usr/share/keyrings/
+keyrings/ubuntu-cloudimage-removed-keys.gpg usr/share/keyrings/

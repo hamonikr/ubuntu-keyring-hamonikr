@@ -1,0 +1,34 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+binary: checkkeyrings
+
+regenerate-key-fragments:
+	rm -f keyrings/ubuntu-keyring-*.gpg
+	gpg --no-default-keyring --keyring ./keyrings/ubuntu-archive-keyring.gpg --output keyrings/ubuntu-keyring-2018-archive.gpg --export 0xF6ECB3762474EDA9D21B7022871920D1991BC93C
+	gpg --no-default-keyring --keyring ./keyrings/ubuntu-archive-keyring.gpg --output keyrings/ubuntu-keyring-2012-archive.gpg --export 0x790BC7277767219C42C86F933B4FE6ACC0B21F32
+	gpg --no-default-keyring --keyring ./keyrings/ubuntu-archive-keyring.gpg --output keyrings/ubuntu-keyring-2012-cdimage.gpg --export 0x843938DF228D22F7B3742BC0D94AA3F0EFE21092
+	gpg --no-default-keyring --keyring ./keyrings/ubuntu-cloud-keyring.gpg --output keyrings/ubuntu-keyring-2012-cloud-archive.gpg --export 0x391A9AA2147192839E9DB0315EDB1B62EC4926EA
+	gpg --no-default-keyring --keyring ./keyrings/ubuntu-oem-keyring.gpg --output keyrings/ubuntu-keyring-2008-oem.gpg --export 0x236252602787D6BDC2336849F9FDA6BED73CDC22
+	gpg --no-default-keyring --keyring ./keyrings/ubuntu-oem-keyring.gpg --output keyrings/ubuntu-keyring-2020-oem.gpg --export 0x59AC787C2A8C78BA5ECA0B2ED4D1EAED36962F69
+	gpg --no-default-keyring --keyring ./keyrings/ubuntu-dbgsym-keyring.gpg --output keyrings/ubuntu-keyring-2016-dbgsym.gpg --export 0xF2EDC64DC5AEE1F6B9C621F0C8CAB6595FDFF622
+	sha512sum keyrings/*.gpg | gpg --clearsign > SHA512SUMS.txt.asc
+
+checkkeyrings:
+	HOME=$(CURDIR) gpg --no-default-keyring --keyring /usr/share/keyrings/debian-keyring.gpg --decrypt SHA512SUMS.txt.asc | tee verified | sha512sum -c -
+	# Check what are the current fragments
+	sha512sum keyrings/*.gpg > current
+	# Check that all fragments were in the verified SHA512SUMS file
+	! grep -f verified -v current
+	rm -rf .gnupg/
+
+override_dh_installdeb:
+	dh_installdeb
+	# currently all keyring snippets are _not_ conffiles, keep it that way.
+	rm -f debian/*/DEBIAN/conffiles
+
+override_dh_clean:
+	rm -rf .gnupg verified current
+	dh_clean
