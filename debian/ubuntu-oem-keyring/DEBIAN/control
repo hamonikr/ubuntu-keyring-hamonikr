@@ -1,0 +1,12 @@
+Package: ubuntu-oem-keyring
+Source: ubuntu-keyring
+Version: 2020.02.11.2+hamonikr3
+Architecture: all
+Maintainer: Dimitri John Ledkov <dimitri.ledkov@canonical.com>
+Installed-Size: 20
+Section: misc
+Priority: optional
+Description: GnuPG keys of the Ubuntu OEM Vendor Archive
+ The Ubuntu project digitally signs its Release files. This package
+ contains the archive keys used for the oem.archive.canonical.com
+ repository.

@@ -1,15 +1,8 @@
-ubuntu-keyring (2020.02.11.2+hamonikr2) entjin; urgency=medium
+ubuntu-keyring (2020.02.11.2+hamonikr3) entjin; urgency=medium
 
-  * Deploy for HamoniKR Server 2.0
+  * Add HamoniKR and LinuxMint key.
 
- -- HamoniKR <pkg@hamonikr.org>  Tue, 09 Mar 2021 15:36:51 +0900
-
-ubuntu-keyring (2020.02.11.2+hamonikr1) focal; urgency=medium
-
-  * Add linuxmint keyring
-  * Add hamonikr keyring  
-
- -- HamoniKR <pkg@hamonikr.org>  Fri, 06 Nov 2020 14:48:20 +0900
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 16 Mar 2021 13:32:11 +0900
 
 ubuntu-keyring (2020.02.11.2) focal; urgency=medium
 

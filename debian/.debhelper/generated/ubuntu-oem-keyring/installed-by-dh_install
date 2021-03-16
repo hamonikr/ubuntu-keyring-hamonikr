@@ -1,0 +1,4 @@
+./keyrings/ubuntu-keyring-2008-oem.gpg
+./keyrings/ubuntu-keyring-2020-oem.gpg
+./keyrings/ubuntu-oem-keyring.gpg
+./keyrings/ubuntu-oem-removed-keys.gpg

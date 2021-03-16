@@ -1,0 +1,7 @@
+ubuntu-cloud-keyring_2020.02.11.2+hamonikr3_all.deb misc optional
+ubuntu-cloudimage-keyring_2020.02.11.2+hamonikr3_all.deb misc optional
+ubuntu-dbgsym-keyring_2020.02.11.2+hamonikr3_all.deb misc optional
+ubuntu-keyring-udeb_2020.02.11.2+hamonikr3_all.udeb debian-installer standard
+ubuntu-keyring_2020.02.11.2+hamonikr3_all.deb misc important
+ubuntu-keyring_2020.02.11.2+hamonikr3_amd64.buildinfo misc optional
+ubuntu-oem-keyring_2020.02.11.2+hamonikr3_all.deb misc optional

@@ -1,0 +1,6 @@
+bba88562654a79996748dc7174468bcc  etc/apt/trusted.gpg.d/ubuntu-keyring-2008-oem.gpg
+a18d2c3f0d8bad5bb22d90fc0d176030  etc/apt/trusted.gpg.d/ubuntu-keyring-2020-oem.gpg
+177587945091acb35bf9fe0a9acbcfcb  usr/share/doc/ubuntu-oem-keyring/changelog.gz
+f3a03ef829a5a14703b49929085af783  usr/share/doc/ubuntu-oem-keyring/copyright
+7f0fa1993d013b21c54b4e92aaada5b4  usr/share/keyrings/ubuntu-oem-keyring.gpg
+d41d8cd98f00b204e9800998ecf8427e  usr/share/keyrings/ubuntu-oem-removed-keys.gpg

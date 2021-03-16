@@ -1,0 +1,3 @@
+./keyrings/ubuntu-keyring-2012-cloud-archive.gpg
+./keyrings/ubuntu-cloud-keyring.gpg
+./keyrings/ubuntu-cloud-removed-keys.gpg

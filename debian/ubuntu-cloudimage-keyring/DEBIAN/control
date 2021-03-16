@@ -1,0 +1,13 @@
+Package: ubuntu-cloudimage-keyring
+Source: ubuntu-keyring
+Version: 2020.02.11.2+hamonikr3
+Architecture: all
+Maintainer: Dimitri John Ledkov <dimitri.ledkov@canonical.com>
+Installed-Size: 11
+Depends: ubuntu-keyring (>= 2018.02.06)
+Section: misc
+Priority: optional
+Multi-Arch: foreign
+Description: dummy transitional package for GnuPG keys of cloudimage keyring
+ This package can be safely removed, as cloudimage keyring is now
+ shipped in the ubuntu-keyring package

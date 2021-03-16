@@ -1,0 +1,3 @@
+./keyrings/ubuntu-keyring-2016-dbgsym.gpg
+./keyrings/ubuntu-dbgsym-keyring.gpg
+./keyrings/ubuntu-dbgsym-removed-keys.gpg

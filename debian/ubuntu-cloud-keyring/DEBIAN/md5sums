@@ -1,0 +1,5 @@
+2b196531b1de1a1d608bf58a7db01cc2  etc/apt/trusted.gpg.d/ubuntu-keyring-2012-cloud-archive.gpg
+177587945091acb35bf9fe0a9acbcfcb  usr/share/doc/ubuntu-cloud-keyring/changelog.gz
+f3a03ef829a5a14703b49929085af783  usr/share/doc/ubuntu-cloud-keyring/copyright
+41597bf62d69d0db8e3ec0c1e10059b0  usr/share/keyrings/ubuntu-cloud-keyring.gpg
+d41d8cd98f00b204e9800998ecf8427e  usr/share/keyrings/ubuntu-cloud-removed-keys.gpg
