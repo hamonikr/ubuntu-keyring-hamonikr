@@ -4,7 +4,9 @@ Custom Ubuntu keyring package
 
 - include HamoniKR Team Repo sign
 - include Linuxmint sign
-- include Ubuntun archive keyring(ubuntu-keyring-2020.02.11.2)
+- include Ubuntun archive keyring
+- hanla : ubuntu-keyring-2020.02.11.2
+- taebaek : ubuntu-keyring-2020.02.11.4
 
 # How to build
 
