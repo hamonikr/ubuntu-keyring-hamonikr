@@ -1,3 +1,9 @@
+ubuntu-keyring (2021.03.26+hamonikr1) kumkang; urgency=medium
+
+  * Release for HamoniKR 7.0
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 05 Oct 2023 11:28:08 +0900
+
 ubuntu-keyring (2020.02.11.4+hamonikr4) taebaek; urgency=medium
 
   * Update Add HamoniKR and LinuxMint key.
